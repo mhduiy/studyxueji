@@ -3,6 +3,10 @@
 </template>
 
 <script>
+
+
+
+
 export default {
     name: "LayoutComp"
 }
