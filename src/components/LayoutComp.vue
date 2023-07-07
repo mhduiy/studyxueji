@@ -8,9 +8,8 @@
                 <el-aside id="left-nav">
                     <menu-comp></menu-comp>
                 </el-aside>
-
                 <el-main id="content">
-                    content
+                    <router-view/>
                 </el-main>
             </el-container>
         </el-main>
@@ -28,6 +27,10 @@ import MenuComp from "@/components/MenuComp";
 </script>
 
 <style scoped>
+    * {
+        margin: 0;
+        padding: 0;
+    }
     #container {
         display: flex;
         flex-direction: column;
@@ -42,15 +45,16 @@ import MenuComp from "@/components/MenuComp";
     }
     #header {
         height: 40px;
+        border-bottom: lightgray 1px solid;
     }
-    #footer, #header{
+    #footer{
         background-color: #eaeaea;
     }
     #main-container {
         display: flex;
     }
     #left-nav {
-        border: lightskyblue 1px solid;
+        border-right: #e7e7e7 1px solid;
         background-color: #ececec;
         width: 200px;
     }

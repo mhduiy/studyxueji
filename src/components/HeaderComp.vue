@@ -5,22 +5,30 @@
             <span>长江大学学籍管理系统</span>
         </div>
         <div id="right">
-            <span>王先生</span>
+            <span>{{currentUser.name}}</span>
             <a href="#">退出</a>
         </div>
     </div>
 </template>
 
-<script>
-export default {
-    name: "HeaderComp"
-}
+<script setup>
+    import {getCurrentInstance} from "vue";
+
+    const { proxy } = getCurrentInstance();
+    let currentUser = proxy.$currentUser;
 </script>
 
 <style scoped>
+    /*#left {*/
+    /*    display: flex;*/
+    /*}*/
     #left > img {
         width: 100px;
     }
+    /*#left > span {*/
+    /*    align-items: center;*/
+    /*    font-size: 20px;*/
+    /*}*/
     #header-container {
         display: flex;
         justify-content: space-between;
@@ -30,5 +38,6 @@ export default {
 
     #left > *, #right > * {
         margin: 7px;
+        vertical-align: middle;
     }
 </style>
