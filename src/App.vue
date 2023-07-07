@@ -1,26 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <login-page v-if=""/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// 这两个现在是一个组件， 可以当作标签来使用
+    import LoginPage from '@/pages/LoginPage'
+    import LayoutComp from "@/components/LayoutComp";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: {LoginPage}
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
