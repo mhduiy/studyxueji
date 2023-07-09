@@ -25,10 +25,9 @@
     #left > img {
         width: 100px;
     }
-    /*#left > span {*/
-    /*    align-items: center;*/
-    /*    font-size: 20px;*/
-    /*}*/
+    #left > span {
+        font-size: 20px;
+    }
     #header-container {
         display: flex;
         justify-content: space-between;

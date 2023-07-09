@@ -9,9 +9,9 @@ import ElementPlus from 'element-plus'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 import axios from "axios";
-
 let app = createApp(App)
 app.config.globalProperties.$currentUser = reactive({name: "张三"})
+app.config.globalProperties.servCtx = "http://localhost:9002"
 app.use(ElementPlus)
 app.use(router)
 

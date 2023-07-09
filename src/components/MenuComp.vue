@@ -4,7 +4,7 @@
             <el-icon class="is-loading">
                 <component :is="item.icon"/>
             </el-icon>
-            <span>{{item.label}}</span>
+            <span>{{ item.label }}</span>
         </el-menu-item>
     </el-menu>
 </template>
@@ -26,20 +26,20 @@ import {getCurrentInstance, onMounted, reactive} from "vue";
 //     icon: 'Loading'
 // }])
 
-    const { proxy } = getCurrentInstance()
+const {proxy} = getCurrentInstance()
 
-    let menuDatas = reactive([])
-    onMounted((res) => {
-        // 发起 GET 请求
-        proxy.$axios.get("http://localhost:9002/menuList").then(response => {
-            // 处理响应的逻辑
-            console.log(response.data);
-            response.data.forEach((item) => {
-                menuDatas.push(item)
-            })
-        });
-        console.log(res)
-    })
+let menuDatas = reactive([])
+onMounted((res) => {
+    // 发起 GET 请求
+    proxy.$axios.get("http://localhost:9002/menuList").then(response => {
+        // 处理响应的逻辑
+        console.log(response.data);
+        response.data.forEach((item) => {
+            menuDatas.push(item)
+        })
+    });
+    console.log(res)
+})
 
 </script>
 
